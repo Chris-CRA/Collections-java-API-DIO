@@ -1,64 +1,57 @@
 package list.OperacoesBasicas;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListaTarefa {
-    //atributo
-
-    private List<Tarefa> tarefaList;
+    private List<Tarefa> tarefas;
 
     public ListaTarefa() {
-        this.tarefaList = new ArrayList<>();
+        this.tarefas = new ArrayList<>();
     }
 
     public void adicionarTarefa(String descricao) {
-        this.tarefaList.add(new Tarefa(descricao));
+        tarefas.add(new Tarefa(descricao));
+        System.out.println("✅ Tarefa adicionada: " + descricao);
     }
 
     public void removerTarefa(String descricao) {
-        Tarefa tarefaParaRemover = null;
-        for (Tarefa tarefa : tarefaList) {
-            if (tarefa.getDescricao().equals(descricao)) {
-                tarefaParaRemover = tarefa;
-                break;
-            }
-        }
-        if (tarefaParaRemover != null) {
-            tarefaList.remove(tarefaParaRemover);
+        boolean removido = tarefas.removeIf(t -> t.getDescricao().equalsIgnoreCase(descricao));
+        if (removido) {
+            System.out.println("🗑️ Tarefa removida: " + descricao);
         } else {
-            System.out.println("Tarefa não encontrada: " + descricao);
+            System.out.println("⚠️ Tarefa não encontrada: " + descricao);
         }
-        
     }
 
     public int obterNumeroTotalTarefas() {
-        return tarefaList.size();
+        return tarefas.size();
     }
 
-    public void obterDescricoesTarefas() {
-        if (tarefaList.isEmpty()) {
+    public void listarTarefas() {
+        System.out.println("\n📋 Lista de Tarefas:");
+        if (tarefas.isEmpty()) {
             System.out.println("Nenhuma tarefa cadastrada.");
         } else {
-            System.out.println("Tarefas cadastradas:");
-            for (Tarefa tarefa : tarefaList) {
-                System.out.println("- " + tarefa.getDescricao());
-            }
+            tarefas.forEach(System.out::println);
         }
     }
 
     public static void main(String[] args) {
         ListaTarefa lista = new ListaTarefa();
+
         lista.adicionarTarefa("Estudar Java");
         lista.adicionarTarefa("Fazer exercícios de programação");
         lista.adicionarTarefa("Aulas DIO");
         lista.adicionarTarefa("Assistir Aulas QAzando");
-        lista.obterDescricoesTarefas();
-        
-        System.out.println("Número total de tarefas: " + lista.obterNumeroTotalTarefas());
-        
+
+        lista.listarTarefas();
+        System.out.println("\n📌 Total de tarefas: " + lista.obterNumeroTotalTarefas());
+
         lista.removerTarefa("Estudar Java");
-        lista.obterDescricoesTarefas();
-        
-        System.out.println("Número total de tarefas: " + lista.obterNumeroTotalTarefas());
+
+        lista.listarTarefas();
+        System.out.println("\n📌 Total de tarefas atual: " + lista.obterNumeroTotalTarefas());
     }
 }
+
