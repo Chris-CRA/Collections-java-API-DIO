@@ -1,4 +1,4 @@
-package OperacoesComSet.PesquisaComSet;
+package set.Pesquisa;
 
 import java.util.Objects;
 

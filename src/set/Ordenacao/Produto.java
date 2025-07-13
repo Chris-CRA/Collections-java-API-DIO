@@ -1,4 +1,4 @@
-package OperacoesComSet.OrdenacaoSet;
+package set.Ordenacao;
 
 import java.util.Objects;
 
