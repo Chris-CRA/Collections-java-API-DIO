@@ -1,47 +1,57 @@
-# Collection Framework API
+# ☕ Estudos com Java Collections
 
-- Uma coleção (collection) é uma estrutura de dados que serve para agrupar muitos elementos em uma única unidade; estes elementos precisam ser objetos.
-- Uma Collection pode ter coleções homogêneas e heterogêneas, normalmente utilizamos coleções homogêneas de um tipo específico.
-- O núcleo principal das coleções é formado pelas interfaces da figura abaixo; essas interfaces permitem manipular a coleção independentemente do nível de detalhe que elas representam.
-- Temos quatro grandes tipos de coleções: List (lista), Set (conjunto), Queue (fila) e Map (mapa). A partir dessas interfaces, temos muitas subclasses concretas que implementam várias formas diferentes de se trabalhar com cada coleção.
+Este repositório reúne uma série de **exercícios práticos e organizados** com o objetivo de reforçar os conceitos da **Collections Framework** do Java. A proposta foi explorar diferentes estruturas de dados como `List`, `Set` e `Map`, aplicando operações básicas, ordenações, pesquisas e manipulações diversas.
 
-<p align="center">
-<img src="./assets/image/collection-framework.png"><br>
-<a href="https://data-flair.training/blogs/collection-framework-in-java/">Hierarchy of Collection Framework in Java </a>
-</p>
+## 🧠 O que estudei neste projeto
 
+Durante este projeto, exercitei os seguintes conceitos:
 
-- Todas as interfaces e classes são encontradas dentro do pacote (package) java.util.
-- Embora a interface Map não seja filha direta da interface Collection, ela também é considerada uma coleção devido à sua função.
+- 📋 **List**: Operações básicas, ordenações, filtragens e buscas em listas.
+- 🔢 **Set**: Trabalhando com elementos únicos, ordenações personalizadas, buscas e remoções.
+- 🗂️ **Map**: Manipulação de pares chave-valor, ordenação, busca por chave e cálculo de estatísticas.
+- ✅ Uso de **comparators** e **interface Comparable**
+- 🧪 Implementação de lógica de negócio simples para cada estrutura, como:
+  - Lista de tarefas
+  - Catálogo de livros
+  - Agenda de contatos
+  - Controle de estoque
+  - Cadastro de produtos
+  - Agenda de eventos com datas
+- 🧹 Boas práticas com orientação a objetos (OOP), encapsulamento, `toString`, `hashCode`, `equals`, etc.
 
-<p align="center">
-<img src="./assets/image/collection-framework-methods.png" alt="List interface hierarchy Java"><br>
-<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html">Method Sumary Collection Interface</a>
-</p>
+---
 
+## 🧪 Exemplos práticos implementados
+
+- **📘 Catálogo de livros** com busca por título, autor e faixa de ano (`List`)
+- **📅 Agenda de eventos** com ordenação por data e busca do próximo evento (`Map` + `TreeMap`)
+- **✅ Lista de tarefas** com adição, remoção e listagem (`List`)
+- **🛍️ Estoque de produtos** com cálculo de valor total e identificação do mais caro (`Map`)
+- **📞 Agenda de contatos** com atualização e pesquisa por nome (`Set` e `Map`)
+- **🎭 Cadastro de convidados** com códigos únicos (`Set`)
+- **🛒 Produtos com ordenação por nome e preço** (`Set` + `Comparator`)
 
 ---
 
-### Referências:
+## 💻 Tecnologias utilizadas
 
-[1] "Java Collections - Universidade Java." Universidade Java. Disponível em: http://www.universidadejava.com.br/java/java-collection/.
-
-[2] "Java™ Platform, Standard Edition 17 API Specification - Interface Collection." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html.
-
-[3] "Java Comparator and Comparable - Baeldung." Baeldung. Disponível em: https://www.baeldung.com/java-comparator-comparable.
-
-[4] "Java™ Platform, Standard Edition 17 API Specification - Class Collections." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html.
+- Java 17+
+- IDE: Visual Studio Code
+- Collections Framework (`List`, `Set`, `Map`, `HashMap`, `HashSet`, `TreeSet`, `TreeMap`)
+- Programação orientada a objetos
 
 ---
-Se você preferir usar o protocolo SSH para comunicação com o repositório, siga as etapas abaixo:
+👩‍💻 Autora
+Desenvolvido por Christiane Rodrigues
+Estudante de Análise e Desenvolvimento de Sistemas
+Em estudos com foco em Java, Qualidade de Software (QA), e desenvolvimento web
 
-1. Abra o terminal ou prompt de comando.
-2. Navegue até o diretório do projeto.
-3. Execute o seguinte comando para mudar a URL remota para SSH:
+📌 Este projeto foi desenvolvido como parte da trilha de estudos do curso Dominando Java - DIO
 
-   ```shell
-   git remote set-url origin git@github.com:cami-la/collections-java-api-2023.git
+🌐 Contato
+💼 [LinkedIn](https://www.linkedin.com/in/christiane-rodrigues/)
 
-### Dúvidas e Suporte
+🧪 GitHub: [@Chris-CRA](https://chatgpt.com/c/68669961-f758-8007-9c63-2971eba49b71#:~:text=%F0%9F%A7%AA%20GitHub%3A-,%40Chris%2DCRA,-%F0%9F%93%9A%20%22Aprender%20%C3%A9)
 
-Caso você tenha alguma dúvida, problema ou sugestão, fique à vontade para abrir uma issue no repositório. Espero conseguir te ajudar! (:
+
+
